@@ -1,4 +1,4 @@
-<mat-card class="card mat-elevation-z6">
+<mat-card class="card mat-elevation-z6" (pan)="handlePan($event)" (panEnd)="handlePanEnd($event)" [ngClass]="{'card--moving': isMoving}">
   <mat-card-header>
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
     <mat-card-title>{{ card.breed }}</mat-card-title>
